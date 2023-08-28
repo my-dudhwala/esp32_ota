@@ -11,10 +11,10 @@ const char * password = "123456789";
 #define LED_BUILTIN 2
 
 String FirmwareVer = {
-  "2.2"
+  "2.3"
 };
-#define URL_fw_Version "https://raw.github.com/my-dudhwala/esp32_ota/main/version.txt"
-#define URL_fw_Bin "https://raw.github.com/my-dudhwala/esp32_ota/main/esp32_ota.ino.esp32.bin"
+#define URL_fw_Version "https://raw.githubusercontent.com/my-dudhwala/esp32_ota/main/version.txt"
+#define URL_fw_Bin "https://raw.githubusercontent.com/my-dudhwala/esp32_ota/main/esp32_ota.ino.esp32.bin"
 //https://raw.githubusercontent.com/programmer131/ESP8266_ESP32_SelfUpdate/master/esp32_ota/bin_version.txt
 
 //#define URL_fw_Version "http://cade-make.000webhostapp.com/version.txt"
@@ -26,7 +26,7 @@ int FirmwareVersionCheck();
 
 unsigned long previousMillis = 0; // will store last time LED was updated
 unsigned long previousMillis_2 = 0;
-const long interval = 60000;
+const long interval = 10000;
 const long mini_interval = 1000;
 
 #ifndef CERT_H
@@ -74,7 +74,7 @@ void repeatedCall() {
     previousMillis_2 = currentMillis;
     Serial.print("idle loop...");
     Serial.print(num++);
-    Serial.print(" Active fw version:");
+    Serial.print(" Active new fw version:");
     Serial.println(FirmwareVer);
    if(WiFi.status() == WL_CONNECTED) 
    {
