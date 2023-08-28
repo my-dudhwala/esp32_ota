@@ -13,7 +13,7 @@ const char * password = "123456789";
 String FirmwareVer = {
   "2.2"
 };
-#define URL_fw_Version "https://raw.githubusercontent.com/programmer131/ESP8266_ESP32_SelfUpdate/master/esp32_ota/bin_version.txt"
+#define URL_fw_Version "https://raw.github.com/my-dudhwala/esp32_ota/main/version.txt"
 #define URL_fw_Bin "https://raw.github.com/my-dudhwala/esp32_ota/main/esp32_ota.ino.esp32.bin"
 //https://raw.githubusercontent.com/programmer131/ESP8266_ESP32_SelfUpdate/master/esp32_ota/bin_version.txt
 
